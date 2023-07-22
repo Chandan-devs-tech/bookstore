@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background: rgb(42, 240, 237);
+}
+
+.navItems {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 40px;
+}
