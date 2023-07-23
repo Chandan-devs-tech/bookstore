@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://www.picgifs.com/graphics/b/books/graphics-books-732295.gif" alt="Animation" width="150">
+</p>
 <a name="readme-top"></a>
 
 <div align="center">
