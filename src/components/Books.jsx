@@ -2,6 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import BookItems from './BookItems';
 import Input from './Input';
+import '../styles/BookItems.css';
 
 const Books = () => {
   // Assuming you have an array of book data called "booksData"
