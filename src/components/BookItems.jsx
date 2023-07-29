@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import RemoveBtn from './RemoveButton';
 
 const BookItems = ({ book }) => (
   <div className="bookItemContainer">
@@ -14,7 +15,7 @@ const BookItems = ({ book }) => (
       <div className="btnsContainer">
         <button type="button">Comment</button>
         <button type="button">Edit</button>
-        <button type="button">Remove</button>
+        <RemoveBtn bookId={book.id} />
       </div>
     </div>
     <div className="statusContainer">
@@ -36,6 +37,7 @@ BookItems.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
