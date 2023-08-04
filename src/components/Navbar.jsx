@@ -12,7 +12,7 @@ const Navbar = () => (
       <Link to="/categories" className="navitem bordered">CATEGORIES</Link>
     </div>
     <div className="icon">
-      <FontAwesomeIcon icon={faUser} style={{ color: '#013ca2' }} />
+      <FontAwesomeIcon className="userIcon" icon={faUser} />
     </div>
   </nav>
 );
