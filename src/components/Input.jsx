@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/bookSlice';
-import AddButton from './AddButton';
+import { postBook } from '../redux/books/bookSlice';
 
 const Input = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!title.trim() || !author.trim()) {
+  const handleSubmit = () => {
+    if (!title || !author || !category) {
       return;
     }
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
+      category,
       author,
     };
-    dispatch(addBook(newBook)); // Dispatch the addBook action with the newBook data
+    dispatch(postBook(newBook)); // Dispatch the addBook action with the newBook data
     setTitle(''); // Clear the title input
     setAuthor(''); // Clear the author input
   };
   return (
     <div>
       <h2>Add New Book</h2>
-      <form onSubmit={handleSubmit}>
-        {/* Add onSubmit handler */}
+      <form>
         <input
           type="text"
           placeholder="Book title"
@@ -39,7 +38,15 @@ const Input = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <AddButton />
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Poetry">Poetry</option>
+          <option value="Science and Nature">Science and Nature</option>
+          <option value="Mystery/Thriller">Mystery/Thriller</option>
+          <option value="Fantasy">Fantasy</option>
+        </select>
+        <button type="button" onClick={handleSubmit}>Add Book</button>
       </form>
     </div>
   );
