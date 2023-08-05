@@ -4,7 +4,7 @@ import BookList from './BookList';
 import '../styles/BookItems.css';
 
 const Books = () => (
-  <div>
+  <div className="formListContainer">
     <BookList />
     <Input />
   </div>

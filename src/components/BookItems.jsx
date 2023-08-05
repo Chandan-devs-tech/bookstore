@@ -13,27 +13,27 @@ const BookItems = ({
     <div className="bookItemContainer">
       <div className="titleBtns">
         <div className="bookItemTitle">
-          <p>{category}</p>
-          <h2>{title}</h2>
-          <p>{author}</p>
+          <p className="categoryItem">{category}</p>
+          <h2 className="titleItem">{title}</h2>
+          <p className="authorItem">{author}</p>
         </div>
-        <div className="btnsContainer">
+        <div className="btnContainer">
           <button type="button">Comment</button>
-          <button type="button">Edit</button>
+          <button type="button" className="bordered">Edit</button>
           <button type="button" onClick={() => dispatch(deleteBook(id))}>Remove</button>
         </div>
       </div>
       <div className="statusContainer">
-        <FontAwesomeIcon icon={faCircleNotch} style={{ color: '#013CA2' }} />
-        <div className="percentage">
-          <p>65%</p>
-          <p>Completed</p>
+        <FontAwesomeIcon icon={faCircleNotch} className="circle" />
+        <div className="completedContainer">
+          <p className="percentage">65%</p>
+          <p className="completed">Completed</p>
         </div>
       </div>
       <div className="chapterContainer">
-        <p>Current Chapter</p>
-        <p>Chapter 7</p>
-        <button type="button">Update progress</button>
+        <p className="currentChapter">Current Chapter</p>
+        <p className="chapterLesson">Chapter 7</p>
+        <button type="button" className="progressBtn">Update progress</button>
       </div>
     </div>
   );

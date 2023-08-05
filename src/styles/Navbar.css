@@ -7,17 +7,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
-  background: rgb(42, 240, 237);
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+}
+
+.navbarHeading {
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .navItems {
   display: flex;
-  width: 40%;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
-.icon {
-  padding-right: 40px;
+.navitem {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.userIcon {
+  color: #0290ff;
+  overflow: visible;
+  box-sizing: content-box;
+  border-radius: 50%;
+  padding: 0.875rem;
+  border: solid 1px #0290ff;
 }
